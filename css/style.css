@@ -4784,61 +4784,58 @@ textarea.textarea-lg {
 }
 
 .clients-classic {
-	position: relative;
-	display: block;
-	max-width: 270px;
-	margin-left: auto;
-	margin-right: auto;
-	background: #ffffff;
-	border: 1px solid #e1e1e1;
-	transition: all .3s ease-in-out;
-}
-
-.clients-classic::before {
-	position: absolute;
-	content: '';
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	border: 1px solid transparent;
-	transition: all .3s ease;
-	will-change: transform;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px; /* Ensure uniform height */
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    transition: all .3s ease-in-out;
+    margin-bottom: 15px;
+    overflow: hidden; /* Ensures no overflow of large images */
 }
 
 .clients-classic img {
-	width: 100%;
-	opacity: .5;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the image scales to fit the box while maintaining aspect ratio */
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: all .3s ease-in-out;
 }
 
+.clients-classic:hover img {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(0.95);
+}
+
+/* Hover effect for the border */
+.clients-classic:hover {
+    border-color: #151515;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .clients-classic {
+        margin-bottom: 15px;
+    }
+}
+
+/* For desktop hover effects */
 @media (min-width: 992px) {
-	.desktop .clients-classic img {
-		will-change: transform;
-		transition: all .3s ease;
-	}
-	.desktop .clients-classic:hover {
-		border-color: #151515;
-	}
-	.desktop .clients-classic:hover::before {
-		transform: scale(0.94, 0.9);
-		border-color: #151515;
-	}
-	.desktop .clients-classic:hover img {
-		opacity: 1;
-		transform: scale(0.9);
-	}
-	.desktop .context-dark .clients-classic:hover {
-		border-color: rgba(255, 255, 255, 0.6);
-	}
-	.desktop .context-dark .clients-classic:hover::before {
-		border-color: rgba(255, 255, 255, 0.6);
-	}
+    .clients-classic:hover {
+        border-color: #151515;
+    }
+
+    .clients-classic:hover img {
+        transform: scale(0.95);
+        opacity: 1;
+    }
 }
 
-.context-dark .clients-classic {
-	background: transparent;
-	border-color: rgba(255, 255, 255, 0.3);
-}
 
 /*
 *
