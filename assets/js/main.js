@@ -221,3 +221,21 @@
  function closeChat() {
 	document.getElementById('whatsappChat').style.display = 'none';
 }
+
+let lastScrollTop = 0;
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", function () {
+  let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down - hide the header smoothly
+    header.style.transform = "translateY(-100%)";
+    header.style.transition = "transform 0.4s ease-in-out";
+  } else {
+    // Scrolling up - show the header smoothly
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScrollTop = scrollTop;
+});
