@@ -224,18 +224,31 @@
 
 let lastScrollTop = 0;
 const header = document.getElementById("header");
+const menuToggle = document.getElementById("menu-toggle"); // The button that opens the menu
+const navMenu = document.getElementById("nav-menu"); // The menu that appears
 
 window.addEventListener("scroll", function () {
   let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollTop > lastScrollTop) {
-    // Scrolling down - hide the header smoothly
-    header.style.transform = "translateY(-100%)";
-    header.style.transition = "transform 0.4s ease-in-out";
-  } else {
-    // Scrolling up - show the header smoothly
-    header.style.transform = "translateY(0)";
+  // Only hide the header if the menu is NOT open
+  if (!navMenu.classList.contains("open")) {
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down - hide the header smoothly
+      header.style.transform = "translateY(-100%)";
+    } else {
+      // Scrolling up - show the header smoothly
+      header.style.transform = "translateY(0)";
+    }
   }
 
   lastScrollTop = scrollTop;
+});
+
+// Toggle menu visibility
+menuToggle.addEventListener("click", function () {
+  navMenu.classList.toggle("open");
+
+  if (navMenu.classList.contains("open")) {
+    header.style.transform = "translateY(0)"; // Ensure the navbar is visible when menu is open
+  }
 });
