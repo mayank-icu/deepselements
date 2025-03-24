@@ -5,10 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Deeps Elements - Our Clients</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
- 
+  <meta name="description" content="Discover the diverse clients who trust Deeps Elements for their digital needs.">
+  <meta name="keywords" content="clients, portfolio, Deeps Elements, web design, digital marketing">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -23,24 +21,92 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Adding styles to improve client logo presentation -->
+  <style>
+    .clients-classic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    
+    .clients-classic:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    
+    .clients-classic img {
+      max-width: 85%;
+      max-height: 85%;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f9fa;
+    }
+    
+    /* Improve loading experience */
+    .client-grid {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    
+    .loading-indicator {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      width: 100%;
+    }
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border-top: 4px solid #007bff;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .client-image-loaded {
+      opacity: 1 !important;
+    }
+  </style>
 </head>
 
 <body>
-
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/logo-black.png" alt="">
+        <img src="assets/img/logo-black.png" alt="Deeps Elements Logo">
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li class="dropdown"><a href="services.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -50,233 +116,368 @@
               <li><a href="graphic-design.html">Graphic Design</a></li>
             </ul>
           </li>
-          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="clients.html" class="active">Clients</a></li>
-          <li class="dropdown"><a href="photography.html"><span>Photography</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="wedding.html">Wedding</a></li>
-              <li><a href="fashion.html">Fashion</a></li>
-              <li><a href="product.html">Product</a></li>
-              <li><a href="food-beverages.html">Food & Beverages</a></li>
-            </ul>
-          </li>
-        
-          
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-
     </div>
   </header>
 
-  <main class="main" style="margin-top: 50px;">
+  <main class="main" style="margin-top: 120px;">
+    <!-- Our clients -->
+    <section class="section section-xl bg-default">
+      <div class="container">
+        <div class="section-title text-center mb-5" data-aos="fade-up">
+          <h2>Our Clients</h2>
+          <p>We're proud to partner with these amazing organizations</p>
+        </div>
+        
+        <!-- Loading indicator -->
+        <div id="loading-indicator" class="loading-indicator">
+          <div class="spinner"></div>
+        </div>
+        
+        <!-- Client grid that will be shown after images load -->
+        <div id="client-grid" class="client-grid row row-30 row-sm">
+          <!-- Client logos will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
 
-     <!-- Our clients -->
-   <section class="section section-xl bg-default">
-    <div style="padding: 20px;">
-  <div class="section-title" data-aos="fade-up">
-    <h2>Our Clients</h2>
-  </div>
-        <div class="row row-30 row-sm">
-          <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (1).avif" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (1).jpeg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (1).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (1).webp" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (10).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (10).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (11).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (11).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (12).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (12).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (13).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (13).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (14).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (14).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (15).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (15).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (16).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (16).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (17).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (17).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (18).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (18).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (19).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (2).jpeg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (2).jpg" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (2).png" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-            <a class="clients-classic"><img src="assets/img/clients/client (2).webp" alt="" loading="lazy" /></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (20).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (21).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (22).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (23).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (24).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (25).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (26).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (27).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (28).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (29).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (3).jpeg" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (3).jpg" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (3).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (3).webp" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (30).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (31).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (32).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (33).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (34).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (35).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (36).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (37).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (38).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (39).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (4).jpg" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (4).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (4).webp" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (40).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (41).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (42).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (43).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (44).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (45).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (46).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (47).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (48).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (49).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (5).jpg" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (5).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (5).webp" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (50).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (51).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (52).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client (53).png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client1.png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client2.png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client3.png" alt="" loading="lazy" /></a></div>
-        <div class="col-sm-6 col-md-4 col-xl-3"><a class="clients-classic"><img src="assets/img/clients/client4.png" alt="" loading="lazy" /></a></div>
-      
-        </div>
-    </div>
-  </section>
-
-
-
-</main>
-
-
-
-
-   <!-- WhatsApp Icon -->
-   <div class="whatsapp-float" id="whatsappChat">
+  <!-- WhatsApp Icon -->
+  <div class="whatsapp-float" id="whatsappChat">
     <a href="https://web.whatsapp.com/send?phone=+917668648034&text=Hey,%20i%20want%20to%20ask....." target="_blank">
-        <img src="/assets//img/wp.png" alt="WhatsApp">
+      <img src="/assets/img/wp.png" alt="WhatsApp">
     </a>
     <!-- Close Button -->
     <button class="close-btn" onclick="closeChat()">×</button>
   </div>
-  
-  
-        <footer>
-          <div class="content">
-            <div class="top">
-              <div class="logo-details">
-                <img src="/assets/img/logo-white.png" style="height: 50px; width: auto;" alt="">
-              </div>
-              <div class="media-icons">
-                <a href="https://www.facebook.com/profile.php?id=100095354737012&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://x.com/deepselements?t=eup40WsYULvETou_VA8PSQ&s=09"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/deepselements?igsh=MXFycmQ4NjR6ZWE0aw=="><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/deeps-elements-pvt-ltd/"><i class="fab fa-linkedin"></i></a>
-                <a href="https://g.co/kgs/BFGJNxC"><i class="fab fa-google"></i></a>
-              </div>
-            </div>
-          
-          <div class="bottom-details">
-            <div class="bottom_text">
-              <span class="copyright_text" style="text-align: center;">Copyright © 2024 Deeps Elements Pvt. Ltd</span>
-            </div>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <!-- Increased width of first column -->
+        <div class="col-lg-6 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Replace text with image logo -->
+            <img src="assets/img/logo-black.png" alt="Deeps Elements Logo">
+          </a>
+          <p>We craft digital experiences that inspire, engage, and drive results. From cutting-edge design to robust development, we bring your vision to life with innovation and expertise. Let's build something amazing together.</p>
+
+          <div class="social-links d-flex mt-4">
+            <a href="https://x.com/deepselements?t=eup40WsYULvETou_VA8PSQ&s=09" title="Twitter">
+              <img src="assets/img/x.png" alt="Twitter">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100095354737012&mibextid=ZbWKwL" title="Facebook">
+              <img src="assets/img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/deepselements?igsh=MXFycmQ4NjR6ZWE0aw==" title="Instagram">
+              <img src="assets/img/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/deeps-elements-pvt-ltd/" title="LinkedIn">
+              <img src="assets/img/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://g.co/kgs/BFGJNxC" title="Google">
+              <img src="assets/img/google.png" alt="Google">
+            </a>
           </div>
-  
-        </footer>
+        </div>
+
+        <!-- Equal width columns for links with proper spacing -->
+        <div class="col-lg-3 col-md-6 col-sm-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="designing-and-development.html">Designing & Development</a></li>
+            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+            <li><a href="graphic-design.html">Graphic Design</a></li>
+            <li><a href="photography.html">Photography</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center">
+      <p>© <span>Copyright</span> <strong class="sitename">DeepsElements</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <a href="https://mayank.icu/" style="text-decoration: none; color: inherit;">
+          Crafted with <span style="color: red;">♥</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Client Images Loading Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const clientGrid = document.getElementById('client-grid');
+      const loadingIndicator = document.getElementById('loading-indicator');
+      
+      // List of all client image paths
+      const clientImages = [
+        'assets/img/clients/client (1).avif',
+        'assets/img/clients/client (1).jpeg',
+        'assets/img/clients/client (1).jpg',
+        'assets/img/clients/client (1).webp',
+        'assets/img/clients/client (10).jpg',
+        'assets/img/clients/client (10).png',
+        'assets/img/clients/client (11).jpg',
+        'assets/img/clients/client (11).png',
+        'assets/img/clients/client (12).jpg',
+        'assets/img/clients/client (12).png',
+        'assets/img/clients/client (13).jpg',
+        'assets/img/clients/client (13).png',
+        'assets/img/clients/client (14).jpg',
+        'assets/img/clients/client (14).png',
+        'assets/img/clients/client (15).jpg',
+        'assets/img/clients/client (15).png',
+        'assets/img/clients/client (16).jpg',
+        'assets/img/clients/client (16).png',
+        'assets/img/clients/client (17).jpg',
+        'assets/img/clients/client (17).png',
+        'assets/img/clients/client (18).jpg',
+        'assets/img/clients/client (18).png',
+        'assets/img/clients/client (19).png',
+        'assets/img/clients/client (2).jpeg',
+        'assets/img/clients/client (2).jpg',
+        'assets/img/clients/client (2).png',
+        'assets/img/clients/client (2).webp',
+        'assets/img/clients/client (20).png',
+        'assets/img/clients/client (21).png',
+        'assets/img/clients/client (22).png',
+        'assets/img/clients/client (23).png',
+        'assets/img/clients/client (24).png',
+        'assets/img/clients/client (25).png',
+        'assets/img/clients/client (26).png',
+        'assets/img/clients/client (27).png',
+        'assets/img/clients/client (28).png',
+        'assets/img/clients/client (29).png',
+        'assets/img/clients/client (3).jpeg',
+        'assets/img/clients/client (3).jpg',
+        'assets/img/clients/client (3).png',
+        'assets/img/clients/client (3).webp',
+        'assets/img/clients/client (30).png',
+        'assets/img/clients/client (31).png',
+        'assets/img/clients/client (32).png',
+        'assets/img/clients/client (33).png',
+        'assets/img/clients/client (34).png',
+        'assets/img/clients/client (35).png',
+        'assets/img/clients/client (36).png',
+        'assets/img/clients/client (37).png',
+        'assets/img/clients/client (38).png',
+        'assets/img/clients/client (39).png',
+        'assets/img/clients/client (4).jpg',
+        'assets/img/clients/client (4).png',
+        'assets/img/clients/client (4).webp',
+        'assets/img/clients/client (40).png',
+        'assets/img/clients/client (41).png',
+        'assets/img/clients/client (42).png',
+        'assets/img/clients/client (43).png',
+        'assets/img/clients/client (44).png',
+        'assets/img/clients/client (45).png',
+        'assets/img/clients/client (46).png',
+        'assets/img/clients/client (47).png',
+        'assets/img/clients/client (48).png',
+        'assets/img/clients/client (49).png',
+        'assets/img/clients/client (5).jpg',
+        'assets/img/clients/client (5).png',
+        'assets/img/clients/client (5).webp',
+        'assets/img/clients/client (50).png',
+        'assets/img/clients/client (51).png',
+        'assets/img/clients/client (52).png',
+        'assets/img/clients/client (53).png',
+        'assets/img/clients/client1.png',
+        'assets/img/clients/client2.png',
+        'assets/img/clients/client3.png',
+        'assets/img/clients/client4.png'
+      ];
+
+      // Create all client elements first
+      createClientElements();
+      
+      // Then start loading images
+      loadImages();
+      
+      // Set up Intersection Observer to load images as they come into view
+      setupIntersectionObserver();
+      
+      // Function to create all client elements (but images not loaded yet)
+      function createClientElements() {
+        clientImages.forEach((imgSrc, index) => {
+          // Create column div
+          const colDiv = document.createElement('div');
+          colDiv.className = 'col-sm-6 col-md-4 col-xl-3';
+          colDiv.setAttribute('data-aos', 'fade-up');
+          colDiv.setAttribute('data-aos-delay', (index % 8) * 50); // Reduced delay for smoother appearance
+          
+          // Create client wrapper
+          const clientWrapper = document.createElement('a');
+          clientWrapper.className = 'clients-classic';
+          clientWrapper.href = '#'; // Can be removed if not clickable
+          
+          // Create image element
+          const img = document.createElement('img');
+          img.alt = `Client logo ${index + 1}`;
+          img.dataset.src = imgSrc; // Store source in data attribute
+          img.dataset.index = index; // Store index for loading priority
+          
+          // Append elements
+          clientWrapper.appendChild(img);
+          colDiv.appendChild(clientWrapper);
+          clientGrid.appendChild(colDiv);
+        });
         
-
-<!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
-
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
-
+        // Hide loading indicator once DOM is updated
+        loadingIndicator.style.display = 'none';
+      }
+      
+      // Function to start loading images (first batch)
+      function loadImages() {
+        // Load first 12 images immediately
+        const visibleImagesCount = 12;
+        const images = document.querySelectorAll('#client-grid img');
+        
+        for (let i = 0; i < Math.min(visibleImagesCount, images.length); i++) {
+          loadImage(images[i]);
+        }
+        
+        // Initialize AOS after first batch
+        setTimeout(() => {
+          AOS.init({
+            duration: 600, // Shorter duration for smoother animations
+            easing: 'ease-in-out',
+            once: false, // Changed to false to re-animate when scrolling
+            mirror: false
+          });
+        }, 200);
+      }
+      
+      // Function to load a single image
+      function loadImage(imgElement) {
+        if (imgElement.classList.contains('client-image-loaded') || imgElement.src) {
+          return; // Skip if already loaded
+        }
+        
+        // Create temporary image to check loading
+        const tempImg = new Image();
+        
+        tempImg.onload = function() {
+          imgElement.src = imgElement.dataset.src;
+          imgElement.classList.add('client-image-loaded');
+        };
+        
+        tempImg.onerror = function() {
+          imgElement.src = 'assets/img/clients/placeholder.png';
+          imgElement.classList.add('client-image-loaded');
+        };
+        
+        // Start loading
+        tempImg.src = imgElement.dataset.src;
+      }
+      
+      // Set up Intersection Observer to load images as they come into view
+      function setupIntersectionObserver() {
+        if ('IntersectionObserver' in window) {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                loadImage(img);
+                
+                // Stop observing once loaded
+                observer.unobserve(img);
+              }
+            });
+          }, {
+            rootMargin: '200px 0px', // Load images 200px before they come into view
+            threshold: 0.01
+          });
+          
+          // Observe all images except the first batch
+          const images = document.querySelectorAll('#client-grid img');
+          images.forEach((img, index) => {
+            if (index >= 12) { // Skip first 12 images (already loading)
+              imageObserver.observe(img);
+            }
+          });
+        } else {
+          // Fallback for browsers without IntersectionObserver
+          loadAllImagesProgressively();
+        }
+      }
+      
+      // Fallback: load all images progressively
+      function loadAllImagesProgressively() {
+        const images = document.querySelectorAll('#client-grid img:not(.client-image-loaded)');
+        let currentIndex = 12; // Start after first batch
+        
+        function loadNext() {
+          if (currentIndex < images.length) {
+            loadImage(images[currentIndex]);
+            currentIndex++;
+            setTimeout(loadNext, 100); // Load one image every 100ms
+          }
+        }
+        
+        // Start progressive loading
+        loadNext();
+      }
+      
+      // Add scroll event to ensure all images load on fast scrolling
+      window.addEventListener('scroll', debounce(function() {
+        const images = document.querySelectorAll('#client-grid img:not(.client-image-loaded)');
+        if (images.length > 0) {
+          // Load a batch of remaining images on scroll
+          const batchSize = 8;
+          for (let i = 0; i < Math.min(batchSize, images.length); i++) {
+            loadImage(images[i]);
+          }
+        }
+      }, 200));
+      
+      // Debounce function to limit scroll event firing
+      function debounce(func, wait) {
+        let timeout;
+        return function() {
+          const context = this;
+          const args = arguments;
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(context, args), wait);
+        };
+      }
+    });
+    
+    // WhatsApp chat functions
+    function closeChat() {
+      document.getElementById('whatsappChat').style.display = 'none';
+    }
+  </script>
 </body>
-
 </html>
-
-
-

@@ -38,11 +38,11 @@
         <img src="assets/img/logo-black.png" alt="">
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu" >
         <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="services.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html" class="active" style="color: black;">Home</a></li>
+          <li><a href="about.html" style="color: black;">About</a></li>
+          <li class="dropdown"><a href="services.html" style="color: black;"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="designing-and-development.html">Designing & Development</a></li>
               <li><a href="digital-marketing.html">Digital Marketing</a></li>
@@ -50,19 +50,8 @@
               <li><a href="graphic-design.html">Graphic Design</a></li>
             </ul>
           </li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="clients.html">Clients</a></li>
-          <li class="dropdown"><a href="photography.html"><span>Photography</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="wedding.html">Wedding</a></li>
-              <li><a href="fashion.html">Fashion</a></li>
-              <li><a href="product.html">Product</a></li>
-              <li><a href="food-beverages.html">Food & Beverages</a></li>
-            </ul>
-          </li>
-        
-          
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="clients.html" style="color: black;">Clients</a></li>
+          <li><a href="contact.html" style="color: black;">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -74,29 +63,56 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10">
-            <h2 data-aos="fade-up" data-aos-delay="100">Where creativity meets strategy, and together, we build legends.</h2>
-            <p data-aos="fade-up" data-aos-delay="200">Be it a website, app, or your digital identity, our creativity knows no bounds. Our designs breathe life into your brand and deliver digital experiences that captivate your audience from the get-go.
-            </p> 
+      <div class="deep-hero-container">
+        <div class="deep-gradient-bg"></div>
+        
+        <div class="deep-hero-content">
+          <h1 class="deep-hero-title"> Blending Strategy with <span>Creativity</span> </h1>
+          <p class="deep-hero-subtitle">DeepsElements is a Creative Marketing Agency that uses an integrated marketing approach to bring your ideas to life.</p>
+        </div>
+        
+        <div class="deep-media-frame">
+          <div class="deep-video-container">
+            <video class="deep-hero-video" autoplay loop muted playsinline>
+              <source src="assets/img/video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="deep-frame-corner deep-frame-corner-tl"></div>
+            <div class="deep-frame-corner deep-frame-corner-tr"></div>
+            <div class="deep-frame-corner deep-frame-corner-bl"></div>
+            <div class="deep-frame-corner deep-frame-corner-br"></div>
           </div>
-          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="sign-up-form"><input type="email" name="email"><input type="submit" value="Contact"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
+        </div>
+        
+        <div class="deep-badge-left">
+          <div class="deep-award-badge">
+            <div class="deep-badge-content">
+              <h3>Award Winning</h3>
+            </div>
           </div>
+        </div>
+        
+        <div class="deep-badge-right">
+          <div class="deep-followers-badge">
+            <div class="deep-icon">
+              <span>100+</span>
+            </div>
+            <p class="deep-count">Brands Trusted</p>
+          </div>
+        </div>
+        
+        <div class="deep-cta-container">
+          <p class="deep-cta-text">Get Your Free consultation Today</p>
+          <a href="#" class="deep-cta-button">
+            LET'S TALK
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
 
     <!-- Clients Section -->
     <section id="clients" class="clients section">
@@ -258,7 +274,7 @@
         <div class="service-item d-flex">
           <div class="icon flex-shrink-0"><i class="bi bi-laptop"></i></div>
           <div>
-            <h4 class="title"><a href="services-details.html" class="stretched-link">Designing & Development Services</a></h4>
+            <h4 class="title"><a href="designing-and-development.html" class="stretched-link">Designing & Development Services</a></h4>
             <p class="description">We create visually appealing and high-performance websites and apps to give your brand a strong digital presence.</p>
           </div>
         </div>
@@ -269,7 +285,7 @@
         <div class="service-item d-flex">
           <div class="icon flex-shrink-0"><i class="bi bi-bullseye"></i></div>
           <div>
-            <h4 class="title"><a href="services-details.html" class="stretched-link">Digital Marketing Services</a></h4>
+            <h4 class="title"><a href="digital-marketing.html" class="stretched-link">Digital Marketing Services</a></h4>
             <p class="description">Boost your online visibility and engage with your audience through our effective digital marketing strategies.</p>
           </div>
         </div>
@@ -280,7 +296,7 @@
         <div class="service-item d-flex">
           <div class="icon flex-shrink-0"><i class="bi bi-camera"></i></div>
           <div>
-            <h4 class="title"><a href="services-details.html" class="stretched-link">Photography Services</a></h4>
+            <h4 class="title"><a href="photography.html" class="stretched-link">Photography Services</a></h4>
             <p class="description">Capture stunning visuals for your brand with our professional photography services, bringing your products and events to life.</p>
           </div>
         </div>
@@ -291,7 +307,7 @@
         <div class="service-item d-flex">
           <div class="icon flex-shrink-0"><i class="bi bi-brush"></i></div>
           <div>
-            <h4 class="title"><a href="services-details.html" class="stretched-link">Graphic Design Services</a></h4>
+            <h4 class="title"><a href="graphic-design.html" class="stretched-link">Graphic Design Services</a></h4>
             <p class="description">From logos to marketing materials, our creative graphic design solutions help communicate your brand message effectively.</p>
           </div>
         </div>
@@ -315,24 +331,30 @@
             <p>
               We don’t just build brands – we tell stories, create experiences, and deliver results. With our secret mix of digital expertise, creativity, and a dash of crazy, we’re able to breathe life into businesses across the globe. Our team has worked with 500+ brands and delivered 5000+ projects. With over 10 years of experience in the digital world, we know what it takes to make your business stand out.
             </p>
-            <a href="#" class="btn btn-get-started">Get Started</a>
+            <a href="contact.html" class="btn btn-get-started">Get Started</a>
           </div>
           <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-            <div class="image-stack">
-              <img src="assets/img/features-light-1.jpg" alt="" class="stack-front">
-              <img src="assets/img/features-light-2.jpg" alt="" class="stack-back">
-            </div>
+        
+              <img src="https://cdn.dribbble.com/userupload/13066102/file/original-f408a815c559a291fd3e688056801573.gif" 
+              alt="Animated GIF" 
+              class="img-fluid" >
+         
+        
           </div>
         </div><!-- Features Item -->
 
         <div class="row gy-4 align-items-stretch justify-content-between features-item ">
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/features-light-3.jpg" class="img-fluid" alt="">
+            <img src="https://www.lineadatascan.com/wp-content/uploads/2018/10/Infraestructura.gif" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
-            <h3 class="styled-heading">&nbsp;अगर बदलाव नहीं होते तो आज भी हम भैंसों के साथ होते&nbsp;</h3>         
-            <p>We live and breathe change. The digital world is always evolving, and we stay ahead of the curve. Our team works closely with you to make sure your brand is not just following trends, but setting them.</p>
-            <a href="#" class="btn btn-get-started align-self-start">Contact Us</a>
+            <h3>We Dream, We Believe, We Create, and We Deliver.
+            </h3>         
+            <p>We’re here to serve you with that right push to make your digital journey promising, memorable, easy, and creative. We have put shrouds on your head intending to comply with all the changes of the digital world and always take a step ahead for success, and growth.
+    
+              We love to partner with brands that have the hunger to excel and to share their story. We articulate and craft their story with the happy ending they had envisioned.
+              </p>
+            <a href="contact.html" class="btn btn-get-started align-self-start">Contact Us</a>
           </div>
         </div><!-- Features Item -->
 
@@ -340,127 +362,15 @@
 
     </section><!-- /Features Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+  
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>From web designs to brand strategies, our portfolio reflects the diversity of the projects we’ve undertaken and the impact we’ve created.</p>
-      </div><!-- End Section Title -->
+   <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+   <div class="container section-title" data-aos="fade-up" style=" margin-top: 20px; text-align: center; max-width: 90%; margin-left: auto; margin-right: auto;">
+    <h2>What Our Clients Say</h2>
+    <p>Hear from our happy clients about how we’ve helped them grow and succeed.</p>
+</div>
 
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-   
+<div class="elfsight-app-8ed668ad-2319-4a80-9093-99e4cf63e835" data-elfsight-app-lazy style="padding: 15px; max-width: 100%; overflow-x: hidden;"></div>
 
     <!-- Faq Section -->
     <section id="faq" class="faq section">
@@ -492,7 +402,8 @@
               <div class="faq-item">
                 <h3><span class="num">2.</span> <span>How long will it take to build my website or app? </span></h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p>The timeline depends on the complexity of your project. A simple website may take a few weeks, while a custom app or a complex platform could take several months. We follow a structured process to ensure timely delivery without compromising quality. After discussing your requirements, we will provide you with a clear timeline and milestones.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -596,37 +507,37 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="https://formspree.io/f/mqapbbow" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200" onsubmit="return handleSubmit(event)">
               <div class="row gy-4">
-
+            
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name*" required>
                 </div>
-
-                <div class="col-md-6 ">
+            
+                <div class="col-md-6">
                   <input type="email" class="form-control" name="email" placeholder="Your Email*" required>
                 </div>
-
+            
                 <div class="col-12">
-                  <input type="text" class="form-control" name="number" placeholder="Phone Numebr*" required>
+                  <input type="text" class="form-control" name="number" placeholder="Phone Number*" required>
                 </div>
-
+            
                 <div class="col-12">
                   <input type="text" class="form-control" name="subject" placeholder="Subject*" required>
                 </div>
-
+            
                 <div class="col-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Message"></textarea>
                 </div>
-
+            
                 <div class="col-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Dhanyavad!</div>
-
+                  <div id="loading" style="display: none;">Loading...</div>
+                  <div id="error-message" style="color: red; display: none;"></div>
+                  <div id="sent-message" style="color: green; display: none; margin-bottom: 10px;">Your message has been sent.</div>
+            
                   <button type="submit">Send Message</button>
                 </div>
-
+            
               </div>
             </form>
           </div><!-- End Contact Form -->
@@ -636,6 +547,16 @@
       </div>
 
     </section><!-- /Contact Section -->
+
+    <div style="position: relative; width: 100%; height: 400px;">
+      <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.544497614595!2d78.01424357934572!3d30.33547170000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092a023570e971%3A0xce461ffd2e777992!2s82P8%2B5QC%2C%20Chakrata%20Rd%2C%20Ballupur%2C%20Dehradun%2C%20Uttarakhand%20248001!5e0!3m2!1sen!2sin!4v1742663334707!5m2!1sen!2sin" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+  </div>
 
   </main>
 
@@ -649,28 +570,70 @@
     </div>
     
     
-          <footer>
-            <div class="content">
-              <div class="top">
-                <div class="logo-details">
-                  <img src="/assets/img/logo-white.png" style="height: 50px; width: auto;" alt="">
-                </div>
-                <div class="media-icons">
-                  <a href="https://www.facebook.com/profile.php?id=100095354737012&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                  <a href="https://x.com/deepselements?t=eup40WsYULvETou_VA8PSQ&s=09"><i class="fab fa-twitter"></i></a>
-                  <a href="https://www.instagram.com/deepselements?igsh=MXFycmQ4NjR6ZWE0aw=="><i class="fab fa-instagram"></i></a>
-                  <a href="https://www.linkedin.com/company/deeps-elements-pvt-ltd/"><i class="fab fa-linkedin"></i></a>
-                  <a href="https://g.co/kgs/BFGJNxC"><i class="fab fa-google"></i></a>
-                </div>
-              </div>
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <!-- Increased width of first column -->
+          <div class="col-lg-6 col-md-12 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <!-- Replace text with image logo -->
+              <img src="assets/img/logo-black.png" alt="Logo">
+            </a>
+            <p>We craft digital experiences that inspire, engage, and drive results. From cutting-edge design to robust development, we bring your vision to life with innovation and expertise. Let’s build something amazing together.</p>
+  
             
-            <div class="bottom-details">
-              <div class="bottom_text">
-                <span class="copyright_text" style="text-align: center;">Copyright © 2024 Deeps Elements Pvt. Ltd</span>
-              </div>
+            <div class="social-links d-flex mt-4">
+              <a href="https://x.com/deepselements?t=eup40WsYULvETou_VA8PSQ&s=09" title="Twitter">
+                <img src="assets/img/x.png" alt="Twitter">
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100095354737012&mibextid=ZbWKwL" title="Facebook">
+                <img src="assets/img/facebook.png" alt="Facebook">
+              </a>
+              <a href="https://www.instagram.com/deepselements?igsh=MXFycmQ4NjR6ZWE0aw==" title="Instagram">
+                <img src="assets/img/instagram.png" alt="Instagram">
+              </a>
+              <a href="https://www.linkedin.com/company/deeps-elements-pvt-ltd/" title="LinkedIn">
+                <img src="assets/img/linkedin.png" alt="LinkedIn">
+              </a>
+              <a href="https://g.co/kgs/BFGJNxC" title="Google">
+                <img src="assets/img/google.png" alt="Google">
+              </a>
             </div>
+          </div>
     
-          </footer>
+          <!-- Equal width columns for links with proper spacing -->
+          <div class="col-lg-3 col-md-6 col-sm-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-lg-3 col-md-6 col-sm-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="designing-and-development.html">Designing & Development</a></li>
+              <li><a href="digital-marketing.html">Digital Marketing</a></li>
+              <li><a href="graphic-design.html">Graphic Design</a></li>
+              <li><a href="photography.html">Photography</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container copyright text-center">
+        <p>© <span>Copyright</span> <strong class="sitename">DeepsElements</strong> <span>All Rights Reserved</span></p>
+        <div class="credits">
+          <a href="https://mayank.icu/" style="text-decoration: none; color: inherit;">
+            Crafted with <span style="color: red;">♥</span>
+          </a>
+          
+        </div>
+      </div>
+    </footer>
           
 
   <!-- Scroll Top -->
@@ -688,10 +651,45 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      const form = event.target;
+      const formData = new FormData(form);
+      
+      document.getElementById("loading").style.display = "block";
+      document.getElementById("sent-message").style.display = "none";
+      document.getElementById("error-message").style.display = "none";
+  
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        document.getElementById("loading").style.display = "none";
+        if (response.ok) {
+          document.getElementById("sent-message").style.display = "block";
+          form.reset();
+        } else {
+          return response.json().then(data => {
+            throw new Error(data.error || "Something went wrong!");
+          });
+        }
+      })
+      .catch(error => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("error-message").textContent = error.message;
+        document.getElementById("error-message").style.display = "block";
+      });
+    }
+  </script>
 </body>
 
 </html>
