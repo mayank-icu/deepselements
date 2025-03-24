@@ -3330,6 +3330,9 @@ section,
   }
 }
 
+img {
+pointer-events: none;}
+
 @media (max-width: 768px) {
   .deep-hero-container {
     padding: 30px 15px 100px;
